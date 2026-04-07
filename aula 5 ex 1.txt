@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    float C, i, t, M;
+
+    // Entrada de dados
+    printf("Capital: ");
+    scanf("%f", &C);
+
+    printf("Juros (%%): ");
+    scanf("%f", &i);
+
+    printf("Tempo: ");
+    scanf("%f", &t);
+
+    // Converter porcentagem para decimal
+    i = i / 100;
+
+    // Cálculo do montante (juros simples)
+    M = C * (1 + i * t);
+
+    // Saída
+    printf("Montante: %.2f\n", M);
+
+    return 0;
+}

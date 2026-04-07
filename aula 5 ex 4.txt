@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    float C, i, M;
+    int t, mes;
+
+    // Entrada de dados
+    printf("Capital: ");
+    scanf("%f", &C);
+
+    printf("Juros (%%): ");
+    scanf("%f", &i);
+
+    printf("Tempo (meses): ");
+    scanf("%d", &t);
+
+    // Converter porcentagem para decimal
+    i = i / 100;
+
+    // Inicialmente, montante é o capital
+    M = C;
+
+    // Loop mês a mês (juros compostos)
+    for (mes = 1; mes <= t; mes++) {
+        M = M * (1 + i);
+        printf("Mes %d: %.2f\n", mes, M);
+    }
+
+    return 0;
+}

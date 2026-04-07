@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    float C, i, M;
+    int mes;
+
+    // Entrada de dados
+    printf("Capital: ");
+    scanf("%f", &C);
+
+    printf("Juros (%%): ");
+    scanf("%f", &i);
+
+    // Converter porcentagem para decimal
+    i = i / 100;
+
+    // Loop de 12 meses
+    for (mes = 1; mes <= 12; mes++) {
+        M = C * (1 + i * mes);
+        printf("Mes %d: %.2f\n", mes, M);
+    }
+
+    return 0;
+}
